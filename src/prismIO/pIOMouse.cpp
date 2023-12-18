@@ -11,7 +11,7 @@ namespace pIO{
                     int anchorX, anchorY;
                     vPrism[i]->getAnchor(anchorX, anchorY);
                     vPrism[i]->setPos(x - anchorX, y - anchorY);
-
+                    
                     pRender::moveQueue(vPrism, i, vPrism.size()-1);
                     return;
                 }
