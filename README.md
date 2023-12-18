@@ -19,8 +19,8 @@ A 2D Graphics Engine made in C++ using the SDL2 backend
   # Why should you use Prism?
   <b>Prism is:</b>
   <ul>
-    <li>Cross-platform support</li>
-    <li>Static linking</li>
-    <li>Small size</li>
+    <li>Cross-platform</li>
+    <li>Statically linkable</li>
+    <li>Small sized</li>
   </ul>
   <b>You can easily take advantage of all of Prism's features to get you up and running fast in your projects!</b>
