@@ -7,7 +7,7 @@ namespace pIO{
             SDL_GetMouseState(&x, &y);
 
             for(int i = vPrism.size()-1; i>=0; i--)
-                if(vPrism[i]->getIsAnchored()){
+                if(vPrism[i]->getIsAnchored() && vPrism[i]->getIsMovable()){
                     int anchorX, anchorY;
                     vPrism[i]->getAnchor(anchorX, anchorY);
                     vPrism[i]->setPos(x - anchorX, y - anchorY);

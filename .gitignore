@@ -2,3 +2,4 @@ TODOLIST.txt
 lib/SDL2/lib
 src/main.cpp
 *.o
+build/*
