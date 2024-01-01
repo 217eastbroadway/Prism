@@ -17,6 +17,14 @@ bool pObject::getIsAnchored(){
     return isAnchored;
 }
 
+bool pObject::getIsHovered(){
+    return isHovered;
+}
+
 bool pObject::getIsMovable(){
     return isMovable;
+}
+
+bool pObject::getIsHoverable(){
+    return isHoverable;
 }

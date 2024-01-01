@@ -16,10 +16,12 @@ class pObject{
 
         int anchorX, anchorY;
         bool isAnchored;
+        bool isHovered;
         bool isMovable;
+        bool isHoverable;
 
     public:
-        pObject(const char* id, const char* textureDir, int w, int h, int posX, int posY, bool isMovable, SDL_Renderer* rend); //Base constructor
+        pObject(const char* id, const char* textureDir, int w, int h, int posX, int posY, bool isMovable, bool isHoverable, SDL_Renderer* rend); //Base constructor
         pObject(); //Default constructor
 
         pObject(const pObject& copy); //Copy constructor
@@ -30,11 +32,15 @@ class pObject{
         const char* getID();
         void getAnchor(int& anchorX, int& anchorY);
         bool getIsAnchored();
+        bool getIsHovered();
         bool getIsMovable();
+        bool getIsHoverable();
 
         void setAnchor(int anchorX, int anchorY);
         void setIsAnchored(bool isAnchored);
+        void setIsHovered(bool isHovered);
         void setIsMovable(bool isMovable);
+        void setIsHoverable(bool isHoverable);
         void setTexture(const char* textureDir);
         void setPos(int newx, int newy);
 
