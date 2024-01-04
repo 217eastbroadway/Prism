@@ -55,7 +55,7 @@ class pTextObject : public pObject{
         SDL_Color textColor;
 
     public:
-        pTextObject(const char* id, const char* text, const char* fontDir, int fontSize, SDL_Color textColor, int posX, int posY, bool isMovable, SDL_Renderer* rend);
+        pTextObject(const char* id, const char* text, const char* fontDir, int fontSize, SDL_Color textColor, int posX, int posY, bool isMovable, bool isHoverable, SDL_Renderer* rend);
         pTextObject(const pTextObject &copy);
         ~pTextObject();
 

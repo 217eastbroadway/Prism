@@ -1,6 +1,6 @@
 #include <pObject.h>
 
-pTextObject::pTextObject(const char* id, const char* text, const char* fontDir, int fontSize, SDL_Color textColor, int posX, int posY, bool isMovable, SDL_Renderer* rend){
+pTextObject::pTextObject(const char* id, const char* text, const char* fontDir, int fontSize, SDL_Color textColor, int posX, int posY, bool isMovable, bool isHoverable, SDL_Renderer* rend){
     this->id = id;
     this->text = text;
     this->fontSize = fontSize;
@@ -16,6 +16,7 @@ pTextObject::pTextObject(const char* id, const char* text, const char* fontDir, 
 
     isAnchored = false;
     this->isMovable = isMovable;
+    this->isHoverable = isHoverable;
 
     TTF_CloseFont(tempFont);
     //std::cout << "Text Object was created! -> " << this << " -> " << id << " -> " << text << std::endl;

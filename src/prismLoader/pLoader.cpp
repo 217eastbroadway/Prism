@@ -15,7 +15,7 @@ namespace pLoader{
             std::vector<std::string> vPrismArgs;
 
             pIO::fileHandler::parseString(vPrismStr[i].c_str(), vPrismArgs);
-            if(vPrismArgs.size() < 8){ //if argc < 8 (pObject)
+            if(vPrismArgs.size() < 9){ //if argc < 8 (pObject)
                 pObject* tempObj = loadSingleObject(vPrismArgs, rend);
                 if(tempObj)
                     vPrism.push_back(tempObj);
