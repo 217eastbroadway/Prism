@@ -1,7 +1,7 @@
 CC = g++
 
 OBJECTS := *.o
-TARGETS = src/prismRender/*.cpp src/prismObject/*.cpp src/prismIO/*.cpp src/prismText/*.cpp src/prismLoader/*.cpp
+TARGETS = src/prismRender/*.cpp src/prismObject/*.cpp src/prismIO/*.cpp src/prismText/*.cpp src/prismLoader/*.cpp src/prismWindow/*.cpp
 OUTPUT = build/libPrism.a
 SDLINCLUDE = lib/SDL2/include
 PRISMINCLUDE = include

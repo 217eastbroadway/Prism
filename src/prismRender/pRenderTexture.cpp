@@ -1,7 +1,7 @@
 #include <pRender.h>
 
 namespace pRender{
-    SDL_Texture* makeTextureFromImage(SDL_Renderer* renderer, std::string textureDir){
+    SDL_Texture* makeTextureFromImage(std::string textureDir){
         SDL_Surface* loadSurface = IMG_Load(textureDir.c_str());
         if(!loadSurface)
             std::cout << SDL_GetError() << std::endl;

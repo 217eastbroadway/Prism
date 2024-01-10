@@ -1,7 +1,7 @@
 #include <pLoader.h>
 
 namespace pLoader{
-    void loadPack(const char* fileDir, std::vector<pObject*> &vPrism, SDL_Renderer* rend){
+    void loadPack(const char* fileDir, std::vector<pObject*> &vPrism){
         std::ifstream fileLoad;
         fileLoad.open(fileDir);
 
@@ -16,13 +16,13 @@ namespace pLoader{
 
             pIO::fileHandler::parseString(vPrismStr[i].c_str(), vPrismArgs);
             if(vPrismArgs.size() < 9){ //if argc < 8 (pObject)
-                pObject* tempObj = loadSingleObject(vPrismArgs, rend);
+                pObject* tempObj = loadSingleObject(vPrismArgs);
                 if(tempObj)
                     vPrism.push_back(tempObj);
             }
 
             else {
-                pTextObject* tempObj = loadSingleTextObject(vPrismArgs, rend);
+                pTextObject* tempObj = loadSingleTextObject(vPrismArgs);
                 if(tempObj)
                     vPrism.push_back(tempObj);
             }

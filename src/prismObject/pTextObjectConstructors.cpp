@@ -1,15 +1,14 @@
 #include <pObject.h>
 
-pTextObject::pTextObject(const char* id, const char* text, const char* fontDir, int fontSize, SDL_Color textColor, int posX, int posY, bool isMovable, bool isHoverable, SDL_Renderer* rend){
+pTextObject::pTextObject(const char* id, const char* text, const char* fontDir, int fontSize, SDL_Color textColor, int posX, int posY, bool isMovable, bool isHoverable){
     this->id = id;
     this->text = text;
     this->fontSize = fontSize;
     this->textColor = textColor;
-    this->rend = rend;
     this->fontDir = fontDir;
     
     TTF_Font* tempFont = TTF_OpenFont(fontDir, fontSize);
-    texture = pText::textToTexture(text, tempFont, textColor, rend);
+    texture = pText::textToTexture(text, tempFont, textColor);
 
     pText::getFontSize(text, tempFont, &rect.w, &rect.h);
     setPos(posX, posY);
@@ -26,13 +25,12 @@ pTextObject::pTextObject(const pTextObject &copy){
     this->id = id;
     this->text = copy.text;
     this->fontSize = copy.fontSize;
-    this->rend = copy.rend;
     this->fontDir = copy.fontDir;
 
     this->texture = copy.texture;
-    std::cout << "Copy constructor called! -> " << this << " -> " << id << std::endl;
+    //std::cout << "Copy constructor called! -> " << this << " -> " << id << std::endl;
 }
 
 pTextObject::~pTextObject(){
-    std::cout << "Destroyed text object. -> " << this << " -> " << id << " -> " << text << std::endl;
+    //std::cout << "Destroyed text object. -> " << this << " -> " << id << " -> " << text << std::endl;
 }

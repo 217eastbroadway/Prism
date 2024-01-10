@@ -1,9 +1,8 @@
 #include <pObject.h>
 
-pObject::pObject(const char* id, const char* textureDir, int w, int h, int posX, int posY, bool isMovable, bool isHoverable, SDL_Renderer* rend){
+pObject::pObject(const char* id, const char* textureDir, int w, int h, int posX, int posY, bool isMovable, bool isHoverable){
     this->id = id;
-    this->rend = rend;
-    texture = pRender::makeTextureFromImage(rend, textureDir);
+    texture = pRender::makeTextureFromImage(textureDir);
 
     rect.w = w;
     rect.h = h;
@@ -23,7 +22,6 @@ pObject::pObject(){
 }
 
 pObject::pObject(const pObject& copy){
-    this->rend = copy.rend;
     this->texture = copy.texture;
     this->rect = copy.rect;
     this->id = copy.id;
@@ -31,10 +29,10 @@ pObject::pObject(const pObject& copy){
     this->isMovable = isMovable;
     this->isHoverable = isHoverable;
 
-    printf("Copy constructor called! -> 0x%p\n", this);
+    //printf("Copy constructor called! -> 0x%p\n", this);
 }
 
 pObject::~pObject(){
     SDL_DestroyTexture(texture);
-    std::cout << "Destroyed. -> " << this << " -> " << id << std::endl;
+    //std::cout << "Destroyed. -> " << this << " -> " << id << std::endl;
 }

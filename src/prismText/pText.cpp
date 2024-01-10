@@ -1,12 +1,12 @@
 #include "pText.h"
 
 namespace pText{
-    SDL_Texture* textToTexture(const char* text, TTF_Font* font, const SDL_Color textColor, SDL_Renderer* rend){
+    SDL_Texture* textToTexture(const char* text, TTF_Font* font, const SDL_Color textColor){
         SDL_Surface* tempSurface = TTF_RenderText_Blended(font, text, textColor);
         if(!tempSurface)
             std::cout << SDL_GetError() << std::endl;
 
-        SDL_Texture* tempTexture = SDL_CreateTextureFromSurface(rend, tempSurface);
+        SDL_Texture* tempTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
         if(!tempTexture)
             std::cout << SDL_GetError() << std::endl;
         

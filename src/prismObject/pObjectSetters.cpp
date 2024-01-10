@@ -23,7 +23,7 @@ void pObject::setIsHoverable(bool isHoverable){
 
 void pObject::setTexture(const char* textureDir){
     SDL_DestroyTexture(texture);
-    texture = pRender::makeTextureFromImage(rend, textureDir);
+    texture = pRender::makeTextureFromImage(textureDir);
 }
 
 void pObject::setPos(int newx, int newy){

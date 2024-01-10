@@ -6,7 +6,7 @@ void pTextObject::setText(const char* text){
 
     SDL_DestroyTexture(texture);
     
-    texture = pText::textToTexture(this->text.c_str(), tempFont, textColor, rend);
+    texture = pText::textToTexture(this->text.c_str(), tempFont, textColor);
     pText::getFontSize(this->text.c_str(), tempFont, &rect.w, &rect.h);
     TTF_CloseFont(tempFont);
 }
