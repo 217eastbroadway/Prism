@@ -1,11 +1,11 @@
 #include <pRender.h>
 
 namespace pRender{
-    void clearScreen(){
+    void clearWindow(){
         SDL_RenderClear(renderer);
     }
 
-    void updateScreen(){
+    void updateWindow(){
         SDL_RenderPresent(renderer);
     }
 }

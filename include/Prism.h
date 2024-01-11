@@ -1,5 +1,7 @@
 #pragma once
 
+#define SDL_MAIN_HANDLED
+
 /*
 THIS HEADER FILE INCLUDES ALL THE HEADER FILES OF THE PRISM ENGINE.
 */
@@ -9,3 +11,4 @@ THIS HEADER FILE INCLUDES ALL THE HEADER FILES OF THE PRISM ENGINE.
 #include <pText.h>
 #include <pIO.h>
 #include <pLoader.h>
+#include <pWindow.h>

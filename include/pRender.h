@@ -6,8 +6,8 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
-SDL_Renderer* renderer;
-SDL_Window* win;
+extern SDL_Renderer* renderer;
+extern SDL_Window* win;
 
 namespace pRender{
     SDL_Texture* makeTextureFromImage(std::string textureDir);
