@@ -1,5 +1,8 @@
 TODOLIST.txt
 lib/SDL2/lib
 src/main.cpp
-*.o
 build/*
+*.o
+*.png
+*.jpg
+makeimportant.txt
