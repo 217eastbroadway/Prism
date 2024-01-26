@@ -1,1 +1,0 @@
-$ /usr/bin/find . -name '*.a' -exec ar -x {} \; #Extracts SDL2 ar archives and rearchives them togheter with Prism object files into a single archive (libPrism.a)
